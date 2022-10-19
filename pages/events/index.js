@@ -21,4 +21,11 @@ function AllEventsPage() {
   );
 }
 
+export async function getStaticProps(){
+  return {
+    props: {
+      featuredEvents:
+    }
+  }
+}
 export default AllEventsPage;

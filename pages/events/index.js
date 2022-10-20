@@ -3,6 +3,7 @@ import EventList from '../../components/events/event-list';
 import EventsSearch from '../../components/events/events-search';
 import { getAllEvents } from '../../dummy-data';
 import { useRouter } from 'next/router';
+import { getFeaturedEvents } from '../../helpers/api-util';
 
 function AllEventsPage() {
   const events = getAllEvents();
@@ -21,11 +22,11 @@ function AllEventsPage() {
   );
 }
 
-export async function getStaticProps(){
-  return {
-    props: {
-      featuredEvents:
-    }
-  }
-}
+// export async function getStaticProps() {
+//   return {
+//     props: {
+//       events: await getFeaturedEvents(),
+//     },
+//   };
+// }
 export default AllEventsPage;

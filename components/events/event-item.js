@@ -6,11 +6,13 @@ import classes from './event-item.module.css';
 
 function EventItem(props) {
   const { title, image, date, location, id } = props;
-  const humanReadableDate = new Date(date).toLocaleDateString('en-US', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  });
+  // const humanReadableDate = new Date(date).toLocaleDateString('en-US', {
+  //   day: 'numeric',
+  //   month: 'long',
+  //   year: 'numeric',
+  // });
+
+  // console.log(`props.date`, props.date);
 
   const formattedAddress = location.replace(', ', '\n');
   const exploreLink = `/events/${id}`;
@@ -22,7 +24,7 @@ function EventItem(props) {
           <h2>{title}</h2>
           <div className={classes.date}>
             <DateIcon />
-            <time>{humanReadableDate}</time>
+            <time>{date}</time>
           </div>
           <div className={classes.address}>
             <AddressIcon />

@@ -54,7 +54,7 @@ export async function getStaticPaths() {
   const path = events.map((event) => ({ params: { eventId: event.id } }));
   return {
     paths: path,
-    fallback: true,
+    fallback: 'blocking',
   };
 }
 
